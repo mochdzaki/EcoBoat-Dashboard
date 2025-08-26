@@ -14,34 +14,39 @@ body{
     padding: 5px 20px;
 }
 
+.fst-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
 .camera{
+    width: 63%;
+    height: 300px;
     padding: 20px;
-    border: 2px solid #8a8a8a;
+    border: 2px solid #bcbcbc;
     border-radius: 7px;
 }
 
 .camera h3 {
-    margin: 10px 0px;
+    margin: 0px;
 }
 
-.snd-content{
-    padding: 10px 0px;
-}
-
-.monitor {
+.snd-content {
     padding: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.monitor h3 {
-    margin: 10px 0px;
+.snd-content h3 {
+    margin: 0;
 }
 
 .spe-monitor {
     padding: 20px;
-    border: 2px solid #8a8a8a;
+    border: 2px solid #bcbcbc;
     border-radius: 7px;
     width: 46%;
     height: 200px;
@@ -49,8 +54,24 @@ body{
 
 .wat-monitor {
     padding: 20px;
-    border: 2px solid #8a8a8a;
+    border: 2px solid #bcbcbc;
     border-radius: 7px;
-    width: 46%;
-    height: 200px;
+    width: 30%;
+    height: 300px;
+}
+
+.table {
+    padding: 20px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    width: 200px;
+    padding: 8px;
+    text-align: center;
+}
+
+.line td, .line th {
+    border-bottom: 1px solid #bcbcbc;
 }
