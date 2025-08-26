@@ -24,8 +24,12 @@ body{
     margin: 10px 0px;
 }
 
+.snd-content{
+    padding: 10px 0px;
+}
+
 .monitor {
-    padding: 20px 0px;
+    padding: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
