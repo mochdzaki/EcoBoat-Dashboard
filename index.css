@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #FFF;
+}
+
+.title {
+    padding: 0px 20px;
+}
+
+.content {
+    padding: 5px 20px;
+}
+
+.camera{
+    padding: 20px;
+    border: 2px solid #8a8a8a;
+    border-radius: 7px;
+}
+
+.camera h3 {
+    margin: 10px 0px;
+}
+
+.monitor {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.monitor h3 {
+    margin: 10px 0px;
+}
+
+.spe-monitor {
+    padding: 20px;
+    border: 2px solid #8a8a8a;
+    border-radius: 7px;
+    width: 46%;
+    height: 200px;
+}
+
+.wat-monitor {
+    padding: 20px;
+    border: 2px solid #8a8a8a;
+    border-radius: 7px;
+    width: 46%;
+    height: 200px;
+}
