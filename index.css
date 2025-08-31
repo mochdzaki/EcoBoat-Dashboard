@@ -57,6 +57,7 @@ body {
     margin: 10px 0px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .snd-container h3 {
@@ -68,7 +69,7 @@ body {
     padding: 20px;
     border: 2px solid #bcbcbc;
     border-radius: 7px;
-    width: 32%;
+    width: 31.5%;
     height: 300px;
     align-content: center;
 }
