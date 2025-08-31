@@ -6,7 +6,6 @@ window.onload = function() {
         data: {
             labels: ['Blue', 'Orange'],
             datasets: [{
-                label: 'Water Quality',
                 data: [80, 25],
                 borderradius: 200,
                 backgroundColor: ['#36A2EB', '#FFCE56'],
@@ -15,13 +14,12 @@ window.onload = function() {
         },
         options: {
             legend: {
-                labels: {
-                    fontFamily: 'Roboto',
-                    boxWidth: 0,
-                    fontSize: 16,
-                    fontColor: '#FF6E6E'
-                },
                 display: false
+            },
+            title: {
+                display: true,
+                text: 'Fair',
+                fontSize: 20
             },
             cutoutPercentage: 70,
             rotation: 1 * Math.PI,
@@ -63,6 +61,28 @@ new Chart("Chart-2", {
         legend: {display: false},
         scales: {
             yAxes: [{ticks: {min: 0, max:100}}],
+        },
+    }
+});
+
+const xValues2 = [50,60,70,80,90,100];
+
+new Chart("Chart-3", {
+    type: "line",
+    data: {
+        labels: xValues2,
+        datasets: [{
+            fill: false,
+            lineTension: 0,
+            backgroundColor: "rgba(255,0,0,1.0)",
+            borderColor: "rgba(255,0,0,0.1)",
+            data: [7,8,8,9,9,9],
+            borderWidth: 3
+        }]
+    },  options: {
+        legend: {display: false},
+        scales: {
+            yAxes: [{ticks: {min: 6, max:16}}],
         },
     }
 });

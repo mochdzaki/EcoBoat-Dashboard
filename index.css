@@ -82,7 +82,8 @@ body {
     padding: 20px;
     border: 2px solid #bcbcbc;
     border-radius: 7px;
-    width: 40%;
+    width: 100%;
+    max-width: 860px;
     height: 300px;
 }
 
@@ -129,11 +130,16 @@ body {
 .wat-qual-indi {
     margin: 20px 0px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items: center;
 }
 
-.chart1 {
+.chart2 {
     padding: 0px 20px;
     border: 2px solid;
-    border-color: transparent black transparent transparent;
+    border-color: transparent transparent transparent black;
+}
+
+snd-chart {
+    display: flex;
 }
