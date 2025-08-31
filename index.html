@@ -7,7 +7,8 @@
     <title>ECOBOAT Dashboard</title>
     <meta name="desription" content="Platform online yang menampilkan detail mengenai kondisi dari sungai Ciliwung">
     <link rel="stylesheet" href="index.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
 
 <body>
     <!-- title -->
@@ -16,45 +17,71 @@
         <h4>Species & Ecological Monitoring</h4>
     </div>
     <!-- contents -->
-    <div class="content">
-        <div class="fst-content">
+    <div class="container">
+        <div class="fst-container">
             <div class="camera">
                 <h3>Real-Time River View</h3>
             </div>
-            <div class="wat-monitor">
-                <h3>Water Quality Analytics</h3>
+            <div class="map-container">
+                <h3>Map River Review</h3>
             </div>
         </div>
-            <div class="snd-content">
-                <div class="spe-monitor">
-                    <h3>Species Monitoring</h3>
-                    <div class="table">
-                        <table>
-                            <tr class="line">
-                                <th>Species</th>
-                                <th>Distribution</th>
-                                <th>Population</th>
-                            </tr>
-                            <tr class="line">
-                                <td>Java Barp</td>
-                                <td>Native</td>
-                                <td>100</td>
-                            </tr>
-                            <tr class="line">
-                                <td>Striped catfrich</td>
-                                <td>Invasive</td>
-                                <td>230</td>
-                            </tr>
-                            <tr>
-                                <td>Peacock bass</td>
-                                <td>Invasive</td>
-                                <td>130</td>
-                            </tr>
-                        </table>
-                    </div>
+        <div class="snd-container">
+            <div class="spe-container">
+                <h3>Species Monitoring</h3>
+                <div class="table">
+                    <table>
+                        <tr class="line">
+                            <th>Species</th>
+                            <th>Distribution</th>
+                            <th>Population</th>
+                        </tr>
+                        <tr class="line">
+                            <td>Java Barp</td>
+                            <td>Native</td>
+                            <td>10</td>
+                        </tr>
+                        <tr class="line">
+                            <td>Striped catfich</td>
+                            <td>Invasive</td>
+                            <td>20</td>
+                        </tr>
+                        <tr class="line">
+                            <td>Peacock bass</td>
+                            <td>Invasive</td>
+                            <td>13</td>
+                        </tr>
+                        <tr class="line">
+                            <td>Damselfly</td>
+                            <td>Native</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Chitra chitra</td>
+                            <td>Native</td>
+                            <td>5</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <div class="wat-container">
+                <h3>Water Quality Analytics</h3>
+                <div class="wat-qual-indi">
+                    <canvas class="chart1" id="Chart-1" style="width: 100%; max-width: 230px; max-height: 150px;"></canvas>
+                    <canvas id="Chart-2" style="width: 100%; max-width: 280px; max-height: 130px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="habit-container">
+                <h3>Habitat Health Index</h3>
+            </div>
+            <div class="Ultra-container">
+                <h3>Ultrasonic Fish Sonar</h3>
+            </div>
+        </div>
     </div>
+    <script src="Style.js"></script>
 </body>
 
 </html>
