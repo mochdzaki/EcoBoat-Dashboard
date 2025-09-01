@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px 40px;
     color: #000;
     background-color: #ffffff;
     margin: 0;
@@ -12,13 +12,13 @@ body {
     background-blend-mode: overlay; */
 }
 
-.title {
+/* .title {
     padding: 0px 20px;
-}
+} */
 
-.container {
+/* .container {
     padding: 5px 20px;
-}
+} */
 
 .fst-container {
     display: flex;
@@ -29,7 +29,8 @@ body {
 
 .camera {
     background-color: #ffffff;
-    width: 72%;
+    width: 100%;
+    max-width: 960px;
     height: 300px;
     padding: 20px;
     border: 2px solid #bcbcbc;
@@ -42,7 +43,8 @@ body {
 
 .map-container {
     background-color: #ffffff;
-    width: 21%;
+    width: 100%;
+    max-width: 300px;
     height: 300px;
     padding: 20px;
     border: 2px solid #bcbcbc;
@@ -69,7 +71,8 @@ body {
     padding: 20px;
     border: 2px solid #bcbcbc;
     border-radius: 7px;
-    width: 31.5%;
+    width: 100%;
+    max-width: 400px;
     height: 300px;
     align-content: center;
 }
@@ -110,13 +113,25 @@ body {
     border-bottom: 1px solid #bcbcbc;
 }
 
+.trd-container {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .habit-container {
     background-color: #ffffff;
     padding: 20px;
     border: 2px solid #bcbcbc;
     border-radius: 7px;
     width: 100%;
-    height: 120px;
+    max-width: 400px;
+    height: 210px;
+}
+
+.habit-container h3 {
+    margin: 0px;
 }
 
 .Ultra-container {
@@ -125,7 +140,22 @@ body {
     border: 2px solid #bcbcbc;
     border-radius: 7px;
     width: 100%;
-    height: 120px;
+    max-width: 400px;
+    height: 210px;
+}
+
+.Ultra-container h3 {
+    margin: 0px;
+}
+
+.bio-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #bcbcbc;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 400px;
+    height: 210px;
 }
 
 .wat-qual-indi {
@@ -139,8 +169,4 @@ body {
     padding: 0px 20px;
     border: 2px solid;
     border-color: transparent transparent transparent black;
-}
-
-snd-chart {
-    display: flex;
 }
