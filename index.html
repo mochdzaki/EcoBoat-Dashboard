@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOBOAT Dashboard</title>
-    <meta name="desription" content="Platform online yang menampilkan detail mengenai kondisi dari sungai Ciliwung">
+    <meta name="description" content="Platform online yang menampilkan detail mengenai kondisi dari sungai Ciliwung">
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    </head>
+    <!-- <link rel="stylesheet" type="text/css" href="https://loadingio.github.io/loading-bar/dist/loading-bar.css" />
+    <script src="https://loadingio.github.io/loading-bar/dist/loading-bar.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
 <body>
     <!-- title -->
@@ -67,7 +69,8 @@
             <div class="wat-container">
                 <h3>Water Quality Analytics</h3>
                 <div class="wat-qual-indi">
-                    <canvas class="chart1" id="Chart-1" style="width: 100%; max-width: 330px; max-height: 250px;"></canvas>
+                    <canvas class="chart1" id="Chart-1"
+                        style="width: 100%; max-width: 300px; max-height: 250px;"></canvas>
                     <div class="snd-chart">
                         <canvas class="chart2" id="Chart-2" style="width: 500px; max-width: 500px; max-height: 400px;"></canvas>
                     </div>
@@ -94,8 +97,19 @@
                 </div>
             </div>
         </div>
+        <div class="frth-container">
+            <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
+                <h3 style="margin: 0;">Plant & Riparian Species</h3>
+            </div>
+            <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
+                <h3 style="margin: 0 auto;">Historical Data</h3>
+                <div>
+                    <canvas id="Chart-6" style="width: 100%; max-height: 60px;"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="Style.js"></script>
+    <script src="Style.js" defer></script>
 </body>
 
 </html>

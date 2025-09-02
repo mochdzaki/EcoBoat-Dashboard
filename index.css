@@ -159,9 +159,9 @@ body {
 }
 
 .wat-qual-indi {
-    margin: 20px 0px;
+    margin: 20px auto;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -169,4 +169,23 @@ body {
     padding: 0px 20px;
     border: 2px solid;
     border-color: transparent transparent transparent black;
+}
+
+.frth-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #bcbcbc;
+    border-radius: 7px;
+}
+
+.proggress {
+    background-color: #d8d8d8;
+    border-radius: 13px;
+    
 }
