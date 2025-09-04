@@ -4,9 +4,10 @@ window.onload = function () {
         data: {
             labels: ['Blue', 'Orange'],
             datasets: [{
-                data: [80, 30],
+                label: 'Good',
+                data: [80, 20],
                 borderRadius: 20,
-                backgroundColor: ['#6ca2ff', '#c8ced7'],
+                backgroundColor: ['rgba(107, 209, 255, 1)', 'rgba(200, 206, 215, 0.7)'],
                 borderWidth: 0
             }]
         },
@@ -24,8 +25,11 @@ window.onload = function () {
                     font: {
                         size: 20
                     }
-                }
+                },
             },
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
         }
     });
 
@@ -131,30 +135,40 @@ window.onload = function () {
                     fill: true,
                     tension: 0,
                     backgroundColor: "rgba(255, 97, 70, 0.7)",
+                    borderColor: "rgba(255, 97, 70, 1)",
+                    borderWidth: 1,
                     data: [2, 4, 5, 7, 8, 7]
                 },
                 {
                     fill: true,
                     tension: 0,
                     backgroundColor: "rgba(255, 187, 91, 0.7)",
+                    borderColor: "rgba(255, 187, 91, 1)",
+                    borderWidth: 1,
                     data: [5, 5, 7, 8, 10, 8]
                 },
                 {
                     fill: true,
                     tension: 0,
                     backgroundColor: "rgba(211, 255, 91, 0.7)",
+                    borderColor: "rgba(255, 225, 91, 1)",
+                    borderWidth: 1,
                     data: [7, 8, 10, 12, 11, 9]
                 },
                 {
                     fill: true,
                     tension: 0,
                     backgroundColor: "rgba(91, 255, 142, 0.7)",
+                    borderColor: "rgba(91, 225, 142, 1)",
+                    borderWidth: 1,
                     data: [10, 9, 12, 15, 15, 14]
                 },
                 {
                     fill: true,
                     tension: 0,
                     backgroundColor: "rgba(57, 222, 255, 0.7)",
+                    borderColor: "rgba(57, 225, 225, 1)",
+                    borderWidth: 1,
                     data: [15, 14, 18, 18, 18, 17]
                 }
             ]
@@ -241,16 +255,16 @@ window.onload = function () {
                 label: 'Completion',
                 data: [75],
                 backgroundColor: "rgba(108, 162, 255, 0.7)",
-                borderColor: "rgba(108, 162, 255, 1)",
-                borderWidth: 0.2,
+                borderColor: "rgba(255, 255, 255, 1)",
+                borderWidth: 3,
                 borderRadius: 30,
                 borderSkipped: false,
-            },{
+            }, {
                 label: 'full',
                 data: [100],
                 backgroundColor: "rgba(200, 206, 215, 0.7)",
-                borderColor: "rgba(200, 206, 215, 1)",
-                borderWidth: 0.2,
+                borderColor: "rgba(255, 255, 255, 1)",
+                borderWidth: 3,
                 borderRadius: 30,
                 borderSkipped: false,
             }]
@@ -279,7 +293,7 @@ window.onload = function () {
                     display: false,
                     min: 0,
                     max: 100
-                    
+
                 },
                 y: {
                     display: false,

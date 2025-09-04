@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 10px 40px;
     color: #000;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     margin: 0;
     /* min-height: 100vh;
     background: linear-gradient(161deg, #ffffff 0%, #ffffff 100%), 
@@ -159,7 +159,7 @@ body {
 }
 
 .wat-qual-indi {
-    margin: 20px auto;
+    margin: 45px 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
