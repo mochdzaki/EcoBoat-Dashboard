@@ -367,3 +367,27 @@ window.onload = function () {
         }
     });
 };
+
+const dashboardPage = document.getElementById('Dash-page');
+const dashboardNav = document.getElementById('nav-Dash');
+const AiAnalyticsPage = document.getElementById('AI-Analy-page');
+const AiAnalyticsNav = document.getElementById('nav-AI');
+
+function showPage(page) {
+    if (page === "dashboard") {
+      dashboardPage.classList.remove("hidden");
+      AiAnalyticsPage.classList.add("hidden");
+      dashboardNav.classList.add("active");
+      AiAnalyticsNav.classList.remove("active");
+    } else if (page === "analytics") {
+      dashboardPage.classList.add("hidden");
+      AiAnalyticsPage.classList.remove("hidden");
+      dashboardNav.classList.remove("active");
+      AiAnalyticsNav.classList.add("active");
+    }
+}
+
+dashboardNav.addEventListener("click", () => showPage("dashboard"));
+AiAnalyticsNav.addEventListener("click", () => showPage("analytics"));
+
+showPage("dashboard");

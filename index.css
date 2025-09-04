@@ -245,3 +245,16 @@ body {
     border-radius: 13px;
     
 }
+
+.frt-container {
+    display: flex;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background: #eeeeee;
+}
