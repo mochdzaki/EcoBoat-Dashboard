@@ -9,103 +9,119 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+    <!-- navbar -->
+    <nav class="base-navbar">
+        <h3 style="margin: 0 30px;">LOGO</h3>
+        <ul class="nav-content">
+            <li>
+                <a class="nav-link" href="">Dashboard</a>
+            </li>
+            <li>
+                <a class="nav-link" href="">AI Analytics</a>
+            </li>
+        </ul>
+    </nav>
     <!-- title -->
-    <div class="title">
-        <h1>R2045 Ciliwung Dashboard - AI - Asissted</h1>
-        <h3>Species & Ecological Monitoring</h3>
-    </div>
-    <!-- contents -->
-    <div class="container">
-        <div class="fst-container">
-            <div class="camera">
-                <h3>Real-Time River View</h3>
-            </div>
-            <div class="map-container">
-                <h3>Map River Review</h3>
-            </div>
+    <div class="content">
+        <div class="title">
+            <h1 style="margin: 0;">R2045 Ciliwung Dashboard - AI - Asissted</h1>
+            <h3>Species & Ecological Monitoring</h3>
         </div>
-        <div class="snd-container">
-            <div class="spe-container">
-                <h3>Species Monitoring</h3>
-                <div class="table">
-                    <table>
-                        <tr class="line">
-                            <th>Species</th>
-                            <th>Distribution</th>
-                            <th>Population</th>
-                        </tr>
-                        <tr class="line">
-                            <td>Java Barp</td>
-                            <td>Native</td>
-                            <td>10</td>
-                        </tr>
-                        <tr class="line">
-                            <td>Striped catfich</td>
-                            <td>Invasive</td>
-                            <td>20</td>
-                        </tr>
-                        <tr class="line">
-                            <td>Peacock bass</td>
-                            <td>Invasive</td>
-                            <td>13</td>
-                        </tr>
-                        <tr class="line">
-                            <td>Damselfly</td>
-                            <td>Native</td>
-                            <td>16</td>
-                        </tr>
-                        <tr>
-                            <td>Chitra chitra</td>
-                            <td>Native</td>
-                            <td>5</td>
-                        </tr>
-                    </table>
+        <!-- contents -->
+        <div class="container">
+            <div class="fst-container">
+                <div class="camera">
+                    <h3>Real-Time River View</h3>
+                </div>
+                <div class="map-container">
+                    <h3>Map River Review</h3>
                 </div>
             </div>
-            <div class="wat-container">
-                <h3>Water Quality Analytics</h3>
-                <div class="wat-qual-indi">
-                    <canvas class="chart1" id="Chart-1"
-                        style="width: 100%; max-width: 300px; max-height: 150px;"></canvas>
-                    <div>
-                        <canvas class="chart2" id="Chart-2" style="width: 500px; max-height: 200px;"></canvas>
+            <div class="snd-container">
+                <div class="spe-container">
+                    <h3>Species Monitoring</h3>
+                    <div class="table">
+                        <table>
+                            <tr class="line">
+                                <th>Species</th>
+                                <th>Distribution</th>
+                                <th>Population</th>
+                            </tr>
+                            <tr class="line">
+                                <td>Java Barp</td>
+                                <td>Native</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="line">
+                                <td>Striped catfich</td>
+                                <td>Invasive</td>
+                                <td>20</td>
+                            </tr>
+                            <tr class="line">
+                                <td>Peacock bass</td>
+                                <td>Invasive</td>
+                                <td>13</td>
+                            </tr>
+                            <tr class="line">
+                                <td>Damselfly</td>
+                                <td>Native</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Chitra chitra</td>
+                                <td>Native</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="wat-container">
+                    <h3>Water Quality Analytics</h3>
+                    <div class="wat-qual-indi">
+                        <canvas class="chart1" id="Chart-1"
+                            style="width: 100%; max-width: 300px; max-height: 150px;"></canvas>
+                        <div>
+                            <canvas class="chart2" id="Chart-2" style="width: 500px; max-height: 200px;"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="trd-container">
-            <div class="habit-container">
-                <h3>Habitat Health Index</h3>
-                <div style="display: block; margin: 15px 0px;">
-                    <canvas id="Chart-3" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+            <div class="trd-container">
+                <div class="habit-container">
+                    <h3>Habitat Health Index</h3>
+                    <div style="display: block; margin: 15px 0px;">
+                        <canvas id="Chart-3" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                    </div>
+                </div>
+                <div class="Ultra-container">
+                    <h3>Ultrasonic Fish Sonar</h3>
+                    <div style="display: block; margin: 15px 0px;">
+                        <canvas id="Chart-4" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                    </div>
+                </div>
+                <div class="bio-container">
+                    <h3 style="margin: 0;">Biological Parameters</h3>
+                    <div style="display: block; margin: 15px 0px;">
+                        <canvas id="Chart-5" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                    </div>
                 </div>
             </div>
-            <div class="Ultra-container">
-                <h3>Ultrasonic Fish Sonar</h3>
-                <div style="display: block; margin: 15px 0px;">
-                    <canvas id="Chart-4" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+            <div class="frth-container">
+                <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
+                    <h3 style="margin: 0;">Plant & Riparian Species</h3>
+                    <canvas id="Chart-6" style="width: 100%; max-height: 50px; margin: 40px 0;"></canvas>
                 </div>
-            </div>
-            <div class="bio-container">
-                <h3 style="margin: 0;">Biological Parameters</h3>
-                <div style="display: block; margin: 15px 0px;">
-                    <canvas id="Chart-5" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="frth-container">
-            <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
-                <h3 style="margin: 0;">Plant & Riparian Species</h3>
-                <canvas id="Chart-6" style="width: 100%; max-height: 50px; margin: 40px 0;"></canvas>
-            </div>
-            <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 10px;">
-                    <h3 style="margin: 0;">Historical Data</h3>
-                    <h3 style="margin: 0;">2021-2024</h3>
-                </div>
-                <div>
-                    <canvas id="Chart-7" style="width: 100%; max-width: 550px; margin: 0 auto; max-height: 130px;"></canvas>
+                <div class="small-container" style="width: 100%; max-width: 630px; height: 150px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 10px;">
+                        <h3 style="margin: 0;">Historical Data</h3>
+                        <h3 style="margin: 0;">2021-2024</h3>
+                    </div>
+                    <div>
+                        <canvas id="Chart-7"
+                            style="width: 100%; max-width: 550px; margin: 0 auto; max-height: 130px;"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
