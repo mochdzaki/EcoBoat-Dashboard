@@ -401,6 +401,56 @@ window.onload = function () {
             indexAxis: 'y',
         }
     });
+
+    new Chart(document.getElementById("Chart-9"), {
+        type: "line",
+        data: {
+            labels: ["Areas 1", "Areas 2", "Areas 3", "Areas 4", "Areas 5"],
+            datasets: [{
+                    fill: false,
+                    tension: 0.3,
+                    borderColor: "rgba(17, 104, 255, 1)",
+                    data: [12, 10, 19, 21, 23],
+                    pointRadius: 0
+                },
+                {
+                    fill: false,
+                    tension: 0.3,
+                    borderColor: "rgba(147, 187, 255, 1)",
+                    data: [8, 15, 23, 18, 20],
+                    pointRadius: 0
+                },
+                {
+                    fill: false,
+                    tension: 0.3,
+                    borderColor: "rgba(190, 214, 255, 1)",
+                    data: [4, 12, 15, 10, 12],
+                    pointRadius: 0
+                }
+            ]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    min: 0,
+                    max: 25,
+                    grid: {
+                        display: true
+                    },
+                }
+            }
+        }
+    });    
 };
 
 const dashboardPage = document.getElementById('Dash-page');
@@ -421,6 +471,7 @@ function showPage(page) {
       AiAnalyticsNav.classList.add("active");
     }
 }
+
 
 dashboardNav.addEventListener("click", () => showPage("dashboard"));
 AiAnalyticsNav.addEventListener("click", () => showPage("analytics"));

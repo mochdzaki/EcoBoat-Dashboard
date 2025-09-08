@@ -136,35 +136,44 @@
     </div>
 
     <!--------------------------- AI Analytics Page ------------------------->
-    <div class="AI-Analy-page content hidden" id="AI-Analy-page" style="margin: 0;">
+    <div class="AI-Analy-page content hidden" id="AI-Analy-page">
         <div class="frt-container"
             style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
-                <h3>AI Insight</h3>
-                <div>
+            <div class="small-container" style="width: 100%; max-width: 200px; height: 200px;">
+                <h4 style="margin: 0;">AI Insight</h4>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/regular-icon/alert-28.png" 
+                    alt=""
+                    style="width: 20px; height: 20px; margin: 10px;">
                     <p>Threath Allerts</p>
                 </div>
-                <div>
-                    <p>Invasive Species</p>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://static.vecteezy.com/system/resources/previews/036/662/871/non_2x/check-free-vector.png" 
+                    alt=""
+                    style="width: 20px; height: 20px; margin: 0px 10px;">
+                    <p style="margin: 0;">Invasive Species</p>
                 </div>
-                <div>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://static.thenounproject.com/png/12334-200.png" 
+                    alt=""
+                    style="width: 20px; height: 20px; margin: 10px;">
                     <p>Habitat Loss</p>
                 </div>
             </div>
-            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
-                <h4>Eco Equilibrium Index</h4>
+            <div class="small-container" style="width: 100%; max-width: 320px; height: 200px;">
+                <h4 style="margin: 0;">Eco Equilibrium Index</h4>
                 <div>
                     <canvas id="Chart-8"></canvas>
                 </div>
             </div>
-            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
+            <div class="small-container" style="width: 100%; max-width: 360px; height: 200px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin: 0;">
                     <h4 style="margin: 0;">Predictive Modelling</h3>
                     <p style="margin: 0;">6 month</p>
                 </div>
                 <div class="table" style="padding: 0;">
                     <table>
-                        <tr class="line">
+                        <tr class="line" style="font-size: 14px;">
                             <td>Fish Population</td>
                             <td>
                                 <img src="https://www.seekpng.com/png/full/165-1652591_fish-vector-fish.png" alt=""
@@ -172,14 +181,14 @@
                             </td>
                             <td>110</td>
                         </tr>
-                        <tr class="line">
+                        <tr class="line" style="font-size: 14px;">
                             <td>Reptile Population</td>
                             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyZ4oYjGfPUY4q8zISR4-KdNXiIb38lkqspA&s"
                                     alt=""
                                     class="img-population"></td>
                             <td>50</td>
                         </tr>
-                        <tr class="line">
+                        <tr style="font-size: 14px;">
                             <td>Crustaceae Population</td>
                             <td><img src="https://cdn.creazilla.com/cliparts/15591578/shrimp-clipart-lg.png" 
                                 alt=""
@@ -187,17 +196,21 @@
                             </td>
                             <td>30</td>
                         </tr>
-                        <tr>
-                            <td>Amphibian Population</td>
-                            <td><img src="https://cdn2.iconfinder.com/data/icons/reptiles-amphibians/90/16-512.png" 
-                                alt=""
-                                class="img-population"></td>
-                            <td>35</td>
-                        </tr>
                     </table>
                 </div>
             </div>
         </div>
+        <div class="snd-container">
+            <div class="small-container" style="width: 100%; max-width: 295px; height: 200px;">
+                <h4 style="margin: 0;">Predictive Ecological Models</h4>
+                <canvas id="Chart-9" style="width: 100%; max-width: 400px; margin: 20px 0px;"></canvas>
+            </div>
+            <div class="small-container" style="width: 100%; max-width: 295px; height: 200px;">
+                <h4 style="margin: 0;">Anomaly Detection</h4>
+            </div>
+            <div class="small-container" style="width: 100%; max-width: 295px; height: 200px;">
+                <h4 style="margin: 0;">Species Recognation Engine</h4>
+            </div>
     </div>
     <script src="Style.js" defer></script>
 </body>
