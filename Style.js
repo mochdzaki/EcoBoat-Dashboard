@@ -366,6 +366,41 @@ window.onload = function () {
             }
         }
     });
+
+    new Chart(document.getElementById("Chart-8"), {
+        type: "doughnut",
+        data: {
+            labels: ["Bad", "Good", "Better", "Perfect"],
+            datasets: [{
+                label: '72',
+                data: [250, 250, 250, 250],
+                backgroundColor: ['rgba(248, 0, 0, 0.7)', 'rgba(248, 139, 0, 0.7)', 'rgba(248, 232, 0, 0.7)', 'rgba(81, 229, 0, 0.7)'],
+                borderColor: "rgba(225, 225, 255, 1)",
+                borderWidth: 1,
+                borderRadius: 5
+            }]
+        },
+        options: {
+            cutout: '70%',
+            rotation: -90, // ensures top half
+            circumference: 180, // draw 180° more (bottom half)
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: '72',
+                    font: {
+                        size: 20
+                    }
+                },
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+        }
+    });
 };
 
 const dashboardPage = document.getElementById('Dash-page');
@@ -391,3 +426,4 @@ dashboardNav.addEventListener("click", () => showPage("dashboard"));
 AiAnalyticsNav.addEventListener("click", () => showPage("analytics"));
 
 showPage("dashboard");
+

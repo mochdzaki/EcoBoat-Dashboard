@@ -12,13 +12,24 @@
 
 <body>
     <!--------------------------- Navbar ------------------------->
-    <nav class="base-navbar">
-        <h3 style="margin: 30px 30px 0px 30px;">LOGO</h3>
-        <ul class="nav-content">
-            <li id="nav-Dash" style="background-color: #eee; display: flex; align-items: center; justify-content: center;">
+    <nav class="title-navbar">
+        <div class="title">
+            <h1 style="margin: 0;">R2045 Ciliwung Dashboard - AI - Asissted</h1>
+            <h3>Species & Ecological Monitoring</h3>
+        </div>
+        <!-- <ul class="nav-content">
+            <li id="nav-Dash" style="display: flex; align-items: center; justify-content: center;">
                 <a class="nav-link" href="#">Dashboard</a>
             </li>
             <li id="nav-AI" style="display: flex; align-items: center; justify-content: center;">
+                <a class="nav-link" href="#">AI Analytics</a>
+            </li>
+        </ul> -->
+        <ul class="nav-content">
+            <li id="nav-Dash" style="margin: 10px;">
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li id="nav-AI">
                 <a class="nav-link" href="#">AI Analytics</a>
             </li>
         </ul>
@@ -26,51 +37,47 @@
     <!--------------------------- Dashboard Page ------------------------->
     <!-- title -->
     <div class="content" id="Dash-page">
-        <div class="title">
-            <h1 style="margin: 0;">R2045 Ciliwung Dashboard - AI - Asissted</h1>
-            <h3>Species & Ecological Monitoring</h3>
-        </div>
         <!-- contents -->
         <div class="container">
             <div class="fst-container">
                 <div class="camera">
-                    <h3>Real-Time River View</h3>
+                    <h4 style="margin: 0;">Real-Time River View</h4>
                 </div>
                 <div class="map-container">
-                    <h3>Map River Review</h3>
+                    <h4 style="margin: 0;">Map River Review</h4>
                 </div>
             </div>
             <div class="snd-container">
                 <div class="spe-container">
-                    <h3>Species Monitoring</h3>
+                    <h4 style="margin: 0;">Species Monitoring</h4>
                     <div class="table">
                         <table>
-                            <tr class="line">
+                            <tr class="line" style="font-size: 15px;">
                                 <th>Species</th>
                                 <th>Distribution</th>
                                 <th>Population</th>
                             </tr>
-                            <tr class="line">
+                            <tr class="line" style="font-size: 13px;">
                                 <td>Java Barp</td>
                                 <td>Native</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="line">
+                            <tr class="line" style="font-size: 13px;">
                                 <td>Striped catfich</td>
                                 <td>Invasive</td>
                                 <td>20</td>
                             </tr>
-                            <tr class="line">
+                            <tr class="line" style="font-size: 13px;">
                                 <td>Peacock bass</td>
                                 <td>Invasive</td>
                                 <td>13</td>
                             </tr>
-                            <tr class="line">
+                            <tr class="line" style="font-size: 13px;">
                                 <td>Damselfly</td>
                                 <td>Native</td>
                                 <td>16</td>
                             </tr>
-                            <tr>
+                            <tr style="font-size: 13px;">
                                 <td>Chitra chitra</td>
                                 <td>Native</td>
                                 <td>5</td>
@@ -79,44 +86,44 @@
                     </div>
                 </div>
                 <div class="wat-container">
-                    <h3>Water Quality Analytics</h3>
+                    <h4 style="margin: 0;">Water Quality Analytics</h4>
                     <div class="wat-qual-indi">
                         <canvas class="chart1" id="Chart-1"
-                            style="width: 100%; max-width: 300px; max-height: 150px;"></canvas>
+                            style="width: 100%; max-width: 150px; max-height: 150px;"></canvas>
                         <div>
-                            <canvas class="chart2" id="Chart-2" style="width: 430px; max-height: 200px;"></canvas>
+                            <canvas class="chart2" id="Chart-2" style="width: 350px; max-height: 200px;"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="trd-container">
                 <div class="habit-container">
-                    <h3>Habitat Health Index</h3>
+                    <h4 style="margin: 0;">Habitat Health Index</h4>
                     <div style="display: block; margin: 15px 0px;">
-                        <canvas id="Chart-3" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                        <canvas id="Chart-3" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
                 </div>
                 <div class="Ultra-container">
-                    <h3>Ultrasonic Fish Sonar</h3>
+                    <h4 style="margin: 0;">Ultrasonic Fish Sonar</h4>
                     <div style="display: block; margin: 15px 0px;">
-                        <canvas id="Chart-4" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                        <canvas id="Chart-4" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
                 </div>
                 <div class="bio-container">
-                    <h3 style="margin: 0;">Biological Parameters</h3>
+                    <h4 style="margin: 0;">Biological Parameters</h4>
                     <div style="display: block; margin: 15px 0px;">
-                        <canvas id="Chart-5" style="width: 100%; max-width: 350px; margin: 0 auto;"></canvas>
+                        <canvas id="Chart-5" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
                 </div>
             </div>
             <div class="frth-container">
-                <div class="small-container" style="width: 100%; max-width: 490px; height: 150px;">
-                    <h3 style="margin: 0;">Plant & Riparian Species</h3>
+                <div class="small-container" style="width: 100%; max-width: 409px; height: 150px;">
+                    <h4 style="margin: 0;">Plant & Riparian Species</h4>
                     <canvas id="Chart-6" style="width: 100%; max-height: 50px; margin: 40px 0;"></canvas>
                 </div>
-                <div class="small-container" style="width: 100%; max-width: 650px; height: 150px;">
+                <div class="small-container" style="width: 100%; max-width: 515px; height: 150px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 10px;">
-                        <h3 style="margin: 0;">Historical Data</h3>
+                        <h4 style="margin: 0;">Historical Data</h4>
                         <h3 style="margin: 0;">2021-2024</h3>
                     </div>
                     <div>
@@ -129,9 +136,10 @@
     </div>
 
     <!--------------------------- AI Analytics Page ------------------------->
-    <div class="AI-Analy-page hidden" id="AI-Analy-page">
-        <div class="frt-container">
-            <div class="small-container" style="width: 250px;">
+    <div class="AI-Analy-page content hidden" id="AI-Analy-page" style="margin: 0;">
+        <div class="frt-container"
+            style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
                 <h3>AI Insight</h3>
                 <div>
                     <p>Threath Allerts</p>
@@ -143,13 +151,50 @@
                     <p>Habitat Loss</p>
                 </div>
             </div>
-            <div class="small-container" style="width: 250px;">
-                <h3>Eco Equilibrium Index</h3>
+            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
+                <h4>Eco Equilibrium Index</h4>
+                <div>
+                    <canvas id="Chart-8"></canvas>
+                </div>
             </div>
-            <div class="small-container" style="width: 250px;">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <h3>Predictive Modelling</h3>
-                    <p>6 month</p>
+            <div class="small-container" style="width: 100%; max-width: 363px; height: 250px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
+                    <h4 style="margin: 0;">Predictive Modelling</h3>
+                    <p style="margin: 0;">6 month</p>
+                </div>
+                <div class="table" style="padding: 0;">
+                    <table>
+                        <tr class="line">
+                            <td>Fish Population</td>
+                            <td>
+                                <img src="https://www.seekpng.com/png/full/165-1652591_fish-vector-fish.png" alt=""
+                                    class="img-population">
+                            </td>
+                            <td>110</td>
+                        </tr>
+                        <tr class="line">
+                            <td>Reptile Population</td>
+                            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyZ4oYjGfPUY4q8zISR4-KdNXiIb38lkqspA&s"
+                                    alt=""
+                                    class="img-population"></td>
+                            <td>50</td>
+                        </tr>
+                        <tr class="line">
+                            <td>Crustaceae Population</td>
+                            <td><img src="https://cdn.creazilla.com/cliparts/15591578/shrimp-clipart-lg.png" 
+                                alt=""
+                                class="img-population">
+                            </td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Amphibian Population</td>
+                            <td><img src="https://cdn2.iconfinder.com/data/icons/reptiles-amphibians/90/16-512.png" 
+                                alt=""
+                                class="img-population"></td>
+                            <td>35</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
