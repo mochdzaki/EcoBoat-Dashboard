@@ -450,7 +450,106 @@ window.onload = function () {
                 }
             }
         }
-    });    
+    });
+
+    // const map = L.map('map').setView([-6.34185, 106.839582], 18);
+
+    // // Base map
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 19,
+    //   attribution: '© OpenStreetMap contributors'
+    // }).addTo(map);
+
+    // // Marker
+    // L.marker([-6.34185, 106.839582]).addTo(map);
+
+    // // Very small polygon (square around marker)
+    // const polygon = L.polygon([
+    //   [-6.34170, 106.83940],
+    //   [-6.34170, 106.83980],
+    //   [-6.34200, 106.83980],
+    //   [-6.34200, 106.83940]
+    // ], {
+    //   color: "blue",
+    //   fillColor: "cyan",
+    //   fillOpacity: 0.5
+    // }).addTo(map);
+
+    // // Short line across marker
+    // const polyline = L.polyline([
+    //   [-6.34160, 106.83930],
+    //   [-6.34185, 106.83958],
+    //   [-6.34210, 106.83990]
+    // ], {
+    //   color: "red",
+    //   weight: 4
+    // }).addTo(map);
+
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=BKVYJlYdA4K9hvOoNHGN',
+        center: [106.839582, -6.34185], // [lng, lat]
+        zoom: 16
+      });
+  
+      // Add marker
+      new maplibregl.Marker()
+        .setLngLat([106.839582, -6.34185])
+        .addTo(map);
+  
+      map.on('load', () => {
+        // Polygon
+        map.addSource('polygon', {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: {
+              type: 'Polygon',
+              coordinates: [[
+                [106.83940, -6.34170],
+                [106.83980, -6.34170],
+                [106.83980, -6.34200],
+                [106.83940, -6.34200],
+                [106.83940, -6.34170]
+              ]]
+            }
+          }
+        });
+        map.addLayer({
+          id: 'polygon-fill',
+          type: 'fill',
+          source: 'polygon',
+          paint: { 'fill-color': 'cyan', 'fill-opacity': 0.5 }
+        });
+        map.addLayer({
+          id: 'polygon-outline',
+          type: 'line',
+          source: 'polygon',
+          paint: { 'line-color': 'blue', 'line-width': 2 }
+        });
+  
+        // Polyline
+        map.addSource('line', {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: {
+              type: 'LineString',
+              coordinates: [
+                [106.83930, -6.34160],
+                [106.83958, -6.34185],
+                [106.83990, -6.34210]
+              ]
+            }
+          }
+        });
+        map.addLayer({
+          id: 'line-layer',
+          type: 'line',
+          source: 'line',
+          paint: { 'line-color': 'red', 'line-width': 4 }
+        });
+      });
 };
 
 const dashboardPage = document.getElementById('Dash-page');
@@ -460,15 +559,15 @@ const AiAnalyticsNav = document.getElementById('nav-AI');
 
 function showPage(page) {
     if (page === "dashboard") {
-      dashboardPage.classList.remove("hidden");
-      AiAnalyticsPage.classList.add("hidden");
-      dashboardNav.classList.add("active");
-      AiAnalyticsNav.classList.remove("active");
+        dashboardPage.classList.remove("hidden");
+        AiAnalyticsPage.classList.add("hidden");
+        dashboardNav.classList.add("active");
+        AiAnalyticsNav.classList.remove("active");
     } else if (page === "analytics") {
-      dashboardPage.classList.add("hidden");
-      AiAnalyticsPage.classList.remove("hidden");
-      dashboardNav.classList.remove("active");
-      AiAnalyticsNav.classList.add("active");
+        dashboardPage.classList.add("hidden");
+        AiAnalyticsPage.classList.remove("hidden");
+        dashboardNav.classList.remove("active");
+        AiAnalyticsNav.classList.add("active");
     }
 }
 
@@ -477,4 +576,3 @@ dashboardNav.addEventListener("click", () => showPage("dashboard"));
 AiAnalyticsNav.addEventListener("click", () => showPage("analytics"));
 
 showPage("dashboard");
-
