@@ -489,67 +489,62 @@ window.onload = function () {
         container: 'map',
         style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=BKVYJlYdA4K9hvOoNHGN',
         center: [106.839582, -6.34185], // [lng, lat]
-        zoom: 16
-      });
-  
-      // Add marker
-      new maplibregl.Marker()
-        .setLngLat([106.839582, -6.34185])
+        zoom: 14
+    });
+
+    // Add marker
+    new maplibregl.Marker({
+            color: 'red',
+        }).setLngLat([106.840027, -6.342613])
         .addTo(map);
-  
-      map.on('load', () => {
-        // Polygon
-        map.addSource('polygon', {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: {
-              type: 'Polygon',
-              coordinates: [[
-                [106.83940, -6.34170],
-                [106.83980, -6.34170],
-                [106.83980, -6.34200],
-                [106.83940, -6.34200],
-                [106.83940, -6.34170]
-              ]]
-            }
-          }
-        });
-        map.addLayer({
-          id: 'polygon-fill',
-          type: 'fill',
-          source: 'polygon',
-          paint: { 'fill-color': 'cyan', 'fill-opacity': 0.5 }
-        });
-        map.addLayer({
-          id: 'polygon-outline',
-          type: 'line',
-          source: 'polygon',
-          paint: { 'line-color': 'blue', 'line-width': 2 }
-        });
-  
+
+    new maplibregl.Marker({
+            color: 'orange',
+        }).setLngLat([106.837587, -6.341536])
+        .addTo(map);
+
+    map.on('load', () => {
+
         // Polyline
         map.addSource('line', {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: {
-              type: 'LineString',
-              coordinates: [
-                [106.83930, -6.34160],
-                [106.83958, -6.34185],
-                [106.83990, -6.34210]
-              ]
+            type: 'geojson',
+            data: {
+                type: 'Feature',
+                geometry: {
+                    type: 'LineString',
+                    coordinates: [
+                        [106.835413, -6.343964],
+                        [106.836773, -6.342103],
+                        [106.838199, -6.341284],
+                        [106.839871, -6.342613],
+                        [106.840807, -6.342369],
+                        [106.841008, -6.341616],
+                        [106.840674, -6.340951],
+                        [106.839916, -6.340838],
+                        [106.839328, -6.340643],
+                        [106.839406, -6.339864],
+                        [106.840389, -6.338585],
+                        [106.840283, -6.337176],
+                        [106.840404, -6.336025],
+                        [106.840027, -6.335307],
+                        [106.839739, -6.334964],
+                        [106.840094, -6.332227],
+                        [106.843200, -6.331889],
+
+                    ]
+                }
             }
-          }
         });
         map.addLayer({
-          id: 'line-layer',
-          type: 'line',
-          source: 'line',
-          paint: { 'line-color': 'red', 'line-width': 4 }
+            id: 'line-layer',
+            type: 'line',
+            source: 'line',
+            paint: {
+                'line-color': 'blue',
+                'line-width': 6
+            }
         });
-      });
+    });
 };
 
 const dashboardPage = document.getElementById('Dash-page');
