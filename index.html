@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOBOAT Dashboard</title>
     <meta name="description" content="Platform online yang menampilkan detail mengenai kondisi dari sungai Ciliwung">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
@@ -19,8 +22,8 @@
     <!--------------------------- Navbar ------------------------->
     <nav class="title-navbar">
         <div class="title">
-            <h1 style="margin: 0;">R2045 Ciliwung Dashboard - AI - Asissted</h1>
-            <h3>Species & Ecological Monitoring</h3>
+            <h1 style="margin: 0; font-weight: 600;">R2045 Ciliwung Dashboard - AI - Asissted</h1>
+            <h3 style=" font-weight: 500;">Species & Ecological Monitoring</h3>
         </div>
         <!-- <ul class="nav-content">
             <li id="nav-Dash" style="display: flex; align-items: center; justify-content: center;">
@@ -32,10 +35,10 @@
         </ul> -->
         <ul class="nav-content">
             <li id="nav-Dash" style="margin: 10px;">
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" style=" font-weight: 500; font-size: 14px;" href="#">Dashboard</a>
             </li>
             <li id="nav-AI">
-                <a class="nav-link" href="#">AI Analytics</a>
+                <a class="nav-link" style=" font-weight: 500; font-size: 14px;" href="#">AI Analytics</a>
             </li>
         </ul>
     </nav>
@@ -43,21 +46,57 @@
     <!-- title -->
     <div class="content" id="Dash-page">
         <!-- contents -->
-        <div class="container">
+        <div class="container" style="margin-bottom: 40px;">
             <div class="fst-container">
                 <div class="camera">
-                    <h4 style="margin: 0;">Real-Time River View</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Real-Time River View</h4>
                 </div>
                 <div class="map-container">
-                    <h4 style="margin: 0;">Map River Review</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Map River Review</h4>
+                    <div style="display: flex; margin-top: 8px;">
+                        <div id="map1" style="width: 150px; height: 280px; margin: auto;"></div>
+                        <div style="width: 100%; max-width: 160px; margin: 0;">
+                            <h5 style="margin: 0px 29px;">Sampling Site</h5>
+                            <table class="table">
+                                <tr class="line">
+                                    <th style="font-size: 13px; font-weight: 700; padding: 5px 0px;">Station</th>
+                                    <th style="font-size: 13px; font-weight: 700; padding: 5px 0px;">Jakarta Province</th>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 22</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">Mangga Dua</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 21</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">PIK</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 19</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">Manggarai</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 18</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">YPM</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 18</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">Codet</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">St 17</td>
+                                    <td style="font-size: 12px; font-weight: 400; padding: 5px 0px;">Cijantung</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="snd-container">
                 <div class="spe-container">
-                    <h4 style="margin: 0;">Species Monitoring</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Species Monitoring</h4>
                     <div class="table">
                         <table>
-                            <tr class="line" style="font-size: 15px;">
+                            <tr class="line" style="font-size: 15px; font-weight: 500;">
                                 <th>Species</th>
                                 <th>Distribution</th>
                                 <th>Population</th>
@@ -91,7 +130,7 @@
                     </div>
                 </div>
                 <div class="wat-container">
-                    <h4 style="margin: 0;">Water Quality Analytics</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Water Quality Analytics</h4>
                     <div class="wat-qual-indi">
                         <canvas class="chart1" id="Chart-1"
                             style="width: 100%; max-width: 150px; max-height: 150px;"></canvas>
@@ -103,19 +142,19 @@
             </div>
             <div class="trd-container">
                 <div class="habit-container">
-                    <h4 style="margin: 0;">Habitat Health Index</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Habitat Health Index</h4>
                     <div style="display: block; margin: 15px 0px;">
                         <canvas id="Chart-3" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
                 </div>
                 <div class="Ultra-container">
-                    <h4 style="margin: 0;">Ultrasonic Fish Sonar</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Ultrasonic Fish Sonar</h4>
                     <div style="display: block; margin: 15px 0px;">
                         <canvas id="Chart-4" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
                 </div>
                 <div class="bio-container">
-                    <h4 style="margin: 0;">Biological Parameters</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Biological Parameters</h4>
                     <div style="display: block; margin: 15px 0px;">
                         <canvas id="Chart-5" style="width: 100%; max-width: 350px; height: 170px; margin: 0 auto;"></canvas>
                     </div>
@@ -123,13 +162,13 @@
             </div>
             <div class="frth-container">
                 <div class="small-container" style="width: 100%; max-width: 409px; height: 150px;">
-                    <h4 style="margin: 0;">Plant & Riparian Species</h4>
+                    <h4 style="margin: 0; font-weight: 500;">Plant & Riparian Species</h4>
                     <canvas id="Chart-6" style="width: 100%; max-height: 50px; margin: 40px 0;"></canvas>
                 </div>
                 <div class="small-container" style="width: 100%; max-width: 515px; height: 150px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 10px;">
-                        <h4 style="margin: 0;">Historical Data</h4>
-                        <h3 style="margin: 0;">2021-2024</h3>
+                        <h4 style="margin: 0; font-weight: 500;">Historical Data</h4>
+                        <h3 style="margin: 0; font-weight: 400;">2021-2024</h3>
                     </div>
                     <div>
                         <canvas id="Chart-7"
@@ -145,7 +184,7 @@
         <div class="frt-container"
             style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
             <div class="small-container" style="width: 100%; max-width: 200px; height: 200px;">
-                <h4 style="margin: 0;">AI Insight</h4>
+                <h4 style="margin: 0; font-weight: 500;">AI Insight</h4>
                 <div style="display: flex; align-items: center;">
                     <img src="https://icons.veryicon.com/png/o/miscellaneous/regular-icon/alert-28.png" 
                     alt=""
@@ -166,15 +205,15 @@
                 </div>
             </div>
             <div class="small-container" style="width: 100%; max-width: 320px; height: 200px;">
-                <h4 style="margin: 0;">Eco Equilibrium Index</h4>
+                <h4 style="margin: 0; font-weight: 500;">Eco Equilibrium Index</h4>
                 <div>
                     <canvas id="Chart-8"></canvas>
                 </div>
             </div>
             <div class="small-container" style="width: 100%; max-width: 360px; height: 200px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0;">
-                    <h4 style="margin: 0;">Predictive Modelling</h3>
-                    <p style="margin: 0;">6 month</p>
+                    <h4 style="margin: 0; font-weight: 500;">Predictive Modelling</h3>
+                    <p style="margin: 0; font-size: 15px;">6 month</p>
                 </div>
                 <div class="table" style="padding: 0;">
                     <table>
@@ -207,15 +246,15 @@
         </div>
         <div class="snd-container">
             <div class="small-container" style="width: 100%; max-width: 315px; height: 300px; padding: 10px;">
-                <h4 style="margin: 0;">Anomaly Detection</h4>
-                <div id="map" style="width: 100%; height: 270px; margin: 10px 0;"></div>
+                <h4 style="margin: 0; font-weight: 500;">Anomaly Detection</h4>
+                <div id="map2" style="width: 100%; height: 270px; margin: 10px 0;"></div>
             </div>
             <div class="small-container" style="width: 100%; max-width: 295px; height: 300px; padding: 10px;">
-                <h4 style="margin: 0;">Predictive Ecological Models</h4>
+                <h4 style="margin: 0; font-weight: 500;">Predictive Ecological Models</h4>
                 <canvas id="Chart-9" style="width: 100%; max-width: 360px; height: 250px; margin: 20px 0px;"></canvas>
             </div>
             <div class="small-container" style="width: 100%; max-width: 295px; height: 300px;">
-                <h4 style="margin: 0;">Species Recognation Engine</h4>
+                <h4 style="margin: 0; font-weight: 500;">Species Recognation Engine</h4>
             </div>
     </div>
     <script src="Style.js" defer></script>

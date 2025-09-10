@@ -44,7 +44,7 @@ window.onload = function () {
                     fill: false,
                     tension: 0.3,
                     borderColor: "rgba(17, 104, 255, 1)",
-                    data: [86, 90, 92, 40, 78]
+                    data: [86, 90, 92, 40, 78],
                 },
                 {
                     fill: false,
@@ -452,67 +452,105 @@ window.onload = function () {
         }
     });
 
-    // const map = L.map('map').setView([-6.34185, 106.839582], 18);
+    const map1 = new maplibregl.Map({
+        container: 'map1',
+        style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=BKVYJlYdA4K9hvOoNHGN',
+        center: [106.839582, -6.34185], // [lng, lat]
+        zoom: 12
+    });
 
-    // // Base map
-    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //   maxZoom: 19,
-    //   attribution: '© OpenStreetMap contributors'
-    // }).addTo(map);
+    map1.on('load', () => {
+        // Polygon
+        map1.addSource('polygon', {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: {
+              type: 'Polygon',
+              coordinates: [[
+                [106.838193, -6.355857],
+                [106.839397, -6.352012],
+                [106.838826, -6.347302],
+                [106.840740, -6.343415],
+                [106.841150, -6.340860],
+                [106.840959, -6.335532],
+                [106.843803, -6.331998],
+                [106.843831, -6.331128],
+                [106.843519, -6.326440],
+                [106.841029, -6.325200],
+                [106.835161, -6.343958],
+                [106.834889, -6.356405]
+              ]]
+            }
+          }
+        });
+        map1.addLayer({
+          id: 'polygon-fill',
+          type: 'fill',
+          source: 'polygon',
+          paint: { 'fill-color': 'cyan', 'fill-opacity': 0.5 }
+        });
+        map1.addLayer({
+          id: 'polygon-outline',
+          type: 'line',
+          source: 'polygon',
+          paint: { 'line-color': 'blue', 'line-width': 2 }
+        });
+    });
 
-    // // Marker
-    // L.marker([-6.34185, 106.839582]).addTo(map);
-
-    // // Very small polygon (square around marker)
-    // const polygon = L.polygon([
-    //   [-6.34170, 106.83940],
-    //   [-6.34170, 106.83980],
-    //   [-6.34200, 106.83980],
-    //   [-6.34200, 106.83940]
-    // ], {
-    //   color: "blue",
-    //   fillColor: "cyan",
-    //   fillOpacity: 0.5
-    // }).addTo(map);
-
-    // // Short line across marker
-    // const polyline = L.polyline([
-    //   [-6.34160, 106.83930],
-    //   [-6.34185, 106.83958],
-    //   [-6.34210, 106.83990]
-    // ], {
-    //   color: "red",
-    //   weight: 4
-    // }).addTo(map);
-
-    const map = new maplibregl.Map({
-        container: 'map',
+    const map2 = new maplibregl.Map({
+        container: 'map2',
         style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=BKVYJlYdA4K9hvOoNHGN',
         center: [106.839582, -6.34185], // [lng, lat]
         zoom: 14
     });
 
     // Add marker
-    new maplibregl.Marker({
+    const marker1 = new maplibregl.Marker({
             color: 'red',
         }).setLngLat([106.840027, -6.342613])
-        .addTo(map);
+        .addTo(map2);
 
-    new maplibregl.Marker({
+    const marker2 = new maplibregl.Marker({
             color: 'orange',
         }).setLngLat([106.837587, -6.341536])
-        .addTo(map);
+        .addTo(map2);
 
-    map.on('load', () => {
+    // Add popup
+    const popup1 = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        className: 'custom-popup'
+    }).setText('Anomalies');
 
+    const popup2 = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        className: 'custom-popup'
+    }).setText('Moderate');
+
+    marker1.getElement().addEventListener('mouseenter', () => popup1.addTo(map2).setLngLat(marker1.getLngLat()));
+    marker1.getElement().addEventListener('mouseleave', () => popup1.remove());
+
+    marker2.getElement().addEventListener('mouseenter', () => popup2.addTo(map2).setLngLat(marker2.getLngLat()));
+    marker2.getElement().addEventListener('mouseleave', () => popup2.remove());
+
+    map2.on('load', () => {
         // Polyline
-        map.addSource('line', {
+        map2.addSource('line', {
             type: 'geojson',
             data: {
                 type: 'Feature',
                 geometry: {
                     type: 'LineString',
                     coordinates: [
+                        [106.839811, -6.343896],                        
+                        [106.838930, -6.343313],
+                        [106.838058, -6.343313],
+                        [106.837445, -6.343693],
+                        [106.837027, -6.344621],
+                        [106.836555, -6.344807],
+                        [106.835595, -6.344338],
                         [106.835413, -6.343964],
                         [106.836773, -6.342103],
                         [106.838199, -6.341284],
@@ -529,13 +567,12 @@ window.onload = function () {
                         [106.840027, -6.335307],
                         [106.839739, -6.334964],
                         [106.840094, -6.332227],
-                        [106.843200, -6.331889],
-
+                        [106.843200, -6.331889]
                     ]
                 }
             }
         });
-        map.addLayer({
+        map2.addLayer({
             id: 'line-layer',
             type: 'line',
             source: 'line',

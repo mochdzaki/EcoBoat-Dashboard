@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     top: 0;
     /* padding: 20px 100px;margin: 20px 0;
     width: 150px;
@@ -54,11 +55,14 @@ body {
     padding: 10px 0;
     cursor: pointer;
     margin: 0;
-    width: 150px;
-    height: 20px;
+    width: 130px;
+    height: 15px;
     background-color: #ffffff;
     border: 1.5px solid #dddddd;
     border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .nav-content li:hover {
@@ -89,7 +93,7 @@ body {
 .camera {
     background-color: #ffffff;
     width: 100%;
-    max-width: 670px;
+    max-width: 600px;
     height: 300px;
     padding: 15px;
     border: 1.5px solid #dddddd;
@@ -99,7 +103,7 @@ body {
 .map-container {
     background-color: #ffffff;
     width: 100%;
-    max-width: 250px;
+    max-width: 325px;
     height: 300px;
     padding: 15px;
     border: 1.5px solid #dddddd;
@@ -126,7 +130,7 @@ body {
 
 .wat-container {
     background-color: #ffffff;
-    padding: 15px;
+    padding: 15px; 
     border: 1.5px solid #dddddd;
     border-radius: 7px;
     width: 100%;
@@ -218,7 +222,7 @@ body {
 .proggress {
     background-color: #d8d8d8;
     border-radius: 13px;
-    
+
 }
 
 .frt-container {
